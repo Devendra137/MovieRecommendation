@@ -9,10 +9,10 @@ def fetch_poster(movie_id):
     data = response.json()
     return "https://image.tmdb.org/t/p/w500/" + data["poster_path"]
 
-movies_dict = pickle.load(open('C:/Users/Asus/OneDrive/Desktop/MRS/movie_dict.pkl','rb'))
+movies_dict = pickle.load(open('movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_dict)
 
-similarity = pickle.load(open('C:/Users/Asus/OneDrive/Desktop/MRS/similarity.pkl','rb'))
+similarity = pickle.load(open('similarity.pkl','rb'))
 
 
 st.title('Movie Recommendation System')
